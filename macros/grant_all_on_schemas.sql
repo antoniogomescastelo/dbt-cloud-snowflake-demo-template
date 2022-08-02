@@ -11,9 +11,10 @@ Learn more about macros and jinja here: https://docs.getdbt.com/docs/building-a-
     grant usage on schema {{ schema }} to role {{ role }};
     grant select on all tables in schema {{ schema }} to role {{ role }};
     grant select on all views in schema {{ schema }} to role {{ role }};
-    /*
-    grant select on future tables in schema {{ schema }} to role {{ role }};
-    grant select on future views in schema {{ schema }} to role {{ role }};
-    */
   {% endfor %}
 {% endmacro %}
+
+/*
+grant select on future tables in schema {{ schema }} to role {{ role }};
+grant select on future views in schema {{ schema }} to role {{ role }};
+*/
